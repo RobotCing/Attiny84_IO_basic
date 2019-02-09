@@ -224,17 +224,17 @@ int Cing::ReadLightSensor(int sensor,String mode)
     {
       if (sensor == 1)
       {
-        value = digitalRead(LightSensor1);
+        value = map(digitalRead(LightSensor1),0,1,1,0);
         return value;
       }
       else if (sensor == 2)
       {
-        value = digitalRead(LightSensor2);
+        value = map(digitalRead(LightSensor2),0,1,1,0);
         return value;
       }
       else
       {
-        value = digitalRead(LightSensor1);
+        value = map(digitalRead(LightSensor1),0,1,1,0);
         return value;
       }
     }
