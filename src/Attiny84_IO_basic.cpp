@@ -242,23 +242,10 @@ int Cing::ReadLightSensor(int sensor,String mode)
 //--------------------------------------------
 //           UltrasonicSensor
 //--------------------------------------------
-
 int Cing::ReadUltrasonicSensor()
   {
     #define UltrasonicSensor 4
-    int duration;
-    int distance;
-    pinMode(UltrasonicSensor, OUTPUT);
-    digitalWrite(UltrasonicSensor, LOW);
-    delayMicroseconds(2);
-    digitalWrite(UltrasonicSensor, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(UltrasonicSensor, LOW);
-    delayMicroseconds(10);
-    pinMode(UltrasonicSensor, INPUT);
-    duration = pulseIn(UltrasonicSensor, HIGH);
-    distance = duration/58.2;
-    return distance;
+    return digitalRead(UltrasonicSensor);
   }
 //--------------------------------------------
 //             ShineSensor
