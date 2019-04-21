@@ -116,8 +116,6 @@ From `0` to `100` depending on ambient light.
 
 ---
 
-## In progress
-
 ### Cing.ReadUltrasonicSensor()
 
 [Sensor]
